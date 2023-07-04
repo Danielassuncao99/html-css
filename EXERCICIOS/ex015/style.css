@@ -1,0 +1,18 @@
+
+
+body{
+    background-color: rgb(181, 236, 218);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+h1{
+    color: rgb(102, 139, 0);
+    background-color: rgb(186, 226, 43);
+    
+}
+h2{
+    color: brown;
+}
+p{
+    text-align: justify;
+}
