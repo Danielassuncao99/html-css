@@ -1,4 +1,15 @@
-@charset "UTF-8";
+@charset "UTF-8"; /*é uma codificação de caracteres que suporta uma ampla gama de caracteres, incluindo caracteres especiais, letras acentuadas, símbolos e caracteres de idiomas não-latinos.*/
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Rochester&family=Sriracha&display=swap');
+
+
+:root{ /*é usado para selecionar um documento raiz, igual as fontes que usamos. Pegamos no goole fontes, copiamos o import. isso facilita quando quer usar somentes as fontes que adquiriu. */
+    --font01: verdana, geneva, tahoma, sans-serif;  /*fonte padrao*/
+    --font02: 'Passion One', cursive; /*fonte para titulos*/   /* adquirido no google fontes*/
+    --font03: 'Sriracha', cursive; /* fonte para conteudos*/   /*adquirido no google fontes*/
+
+}
+
 
 *{
     margin: 0px;
@@ -7,57 +18,85 @@
 html,body{
     min-height: 100vh; /* minimo de largura / VH é para altura / VW para largura*/
     background-color: darkgray;
+    font-family: var(--font01);
 
 }
 header{
     background-color: black;
     color: white;
-    text-align: center;
+    text-align: center; /* alinhamento de texto/ centralizado*/
     
 
 }
 header > h1{
     /*text-transform: uppercase;*/   /*transformação de texto / maiuscula*/
     font-variant: small-caps;   /*variante de fonte / outra forma de colocar maiuscula */
-    padding: 50px;
+    padding: 50px;   /*prenchimento interior*/
+    font-family: var(--font02);
+    font-size: 10vw;  /*10vw: isso vai ajustar a letra de acordo com tamanho da tela*/
 }
 header > p{
-    padding-bottom: 50px;
+    padding-bottom: 50px; /*espaçamento interno inferior*/
 
 }
 header a, footer a{
     color: white;
-    text-decoration: none;
-    font-weight: bolder;
+    text-decoration: none; /*decoração de texto / none*/
+    font-weight: bolder;  /*aumentando a espessura da fonte em relação ao valor padrão.*/
 
 }
-header a:hover, footer a:hover{
-    text-decoration: underline;
+header a:hover, footer a:hover{   /*o hover é aplicado para criar estilos a um elemento quando o cursor do mouse esta sobre ele. Frequentemente usado para criar botoes interativos*/
+    text-decoration: underline;  /*decoração de texto / sublinhado*/
 }
 
 section{
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
-    padding-left: 30px;
+    padding-top: 10vh;  /*preenchimento superior*/
+    padding-bottom: 10vh;  /*preenchimento inferior*/
+    line-height: 2em; /* altura da linha*/
+    padding-left: 30px; /*preenchimento do lado esquerdo*/
+    font-family: var(--font03);
+    font-size: 3.5vw; /*3.5vw: isso vai ajustar a letra de acordo com tamanho da tela*/
 
 }
+section > p {
+    padding-bottom: 5em; /*preenchimento inferior*/
+}
+    
+
 
 section.normal{
-    background-color: white;
-    color: black;
+    background-color: white;     /*fundo + cor = cor de fundo*/
+    color: black; /* cor da letra*/
 }
 section.imagem{
-    background-color: black;
-    color: white;
+    background-color: black; /*fundo + cor = cor de fundo*/
+    color: white; /* cor da letra*/
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.541);
+    background-size: cover; /*tamanho do plano de fundo, aqui nesse projeto ajustamos o tamanho da imagem*/ 
+    background-attachment: fixed;   /*conhecido como efeito parallax (imagem do fundo fica fixada enquanto vai rolado a pagina.)*/
 }
 section.imagem > p{
-    width: 400px;
-    background-color: rgba(88, 85, 85, 0.247);
+    /*border: 2px solid red */
+    display: inline-block;   /*mostrar bloco em linha*/                     /*vai se transformar a caixa que se adapta ao conteudo*/
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.514); /* cor de fundo*/
+    text-shadow: 1px 1px 0px black;  /*sombra de texto*/
 } 
+section#img01{
+    
+    background-image: url('../imagens/background001.jpg');/* para colocar a imagem que esta na pasta, basta apertar  ('../') para o code sugerir. obs: o crl espaço não funciona aqui.*/
+    background-position: right center;  /* posição do plano de fundo, nesse projeto acertamos a posição da imagem de funto.*/
+    
+
+}
+section#img02{
+    background: url('../imagens/background002.jpg');
+    
+
+}
 footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    background-color: black;   /* cor de fundo */
+    color: white;   /* cor da letra*/
+    text-align: center;   /*alinhamento de texto*/
+    padding: 10px;   /* preenchimento*/
 }
