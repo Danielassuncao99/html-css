@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;/* seve para juntar o quadrado da tabela*/
+            position: relative;
+        }
+        caption{
+            border: 2px solid black;
+            background-color:lightgrey;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 1.5em;
+            
+        }
+
+        tbody> tr:nth-child(odd){/*Efeito zebrado/ 2n é vai pulando a linha. em vez de usar o 2n pode usar o "odd"(impar) ou even(par)*/    
+            background-color: beige;
+
+        }
+        thead> tr >th{
+            position: sticky; /*colavel*/
+            top: 0;
+            background-color: gray;
+            /*isso serve para colar o estado e população quando arrastar para baixo
+            */
+            
+        }
+
+       
+        td,th {
+            border: 2px solid black;
+        }
+
+        thead {
+            background-color: gray;
+            color: white;
+        }
+        td.num{
+            text-align: right;
+        }
+        tfoot{
+            background-color: gray
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--ANATOMIA PARA TABELAS GRANDES
+         table
+           caption
+          THEAD
+            tr, td, th
+          TBODY
+          tr, td, th
+          TFOOT
+          tr, td,th
+        
+        -->
+    <table> <!--tabela-->
+        <caption>População Das Unidades Federativas</caption> <!--título da tabela-->
+        <thead> <!--cabeçalho-->
+            <tr> <!--linha da tabela-->
+                <th scope="col">Estado</th> <!--cabeçalho da tabela-->
+                <th scope="col" style="width: 50px;">População</th>
+                <!--scope col:pra dizer que o "estado" é um titulo de tal coluna usamos isso.  -->
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td> <!--dados da tabela-->
+                <td class="num">44 420 459</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20 538 718</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 054 524</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 136 417</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 443 208</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 880 506</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 058 155</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8 791 688</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 116 132</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7 609 601</td>
+            </tr>
+            
+
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <!--scope row: usado para informar que ele esta informando o titulo da linha e não da coluna igual scope col-->
+                <td class="num">151.049.408</td>
+
+            </tr>
+        </tfoot>
+    </table>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad expedita natus at consectetur mollitia modi, perspiciatis debitis iure non officia harum commodi dolor animi error, enim beatae deserunt vero dicta.
+    </p>
+
+
+</body>
+
+
+</html>
